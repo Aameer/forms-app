@@ -1,16 +1,29 @@
-# Collect Clone Demo
+# Collect Clone
 
-### Demo application and feedback [here](https://google-forms-clone.herokuapp.com/form/in60XZ4GWUswvkaKEOxONvIKkhy4gl/viewform)
+Demo Application for Collect Clone. 
 
-![Collect clone demo](https://drive.google.com/uc?export=view&id=1GEApyE6aRP74zf2ltmTqpr97NDMHOHbP) 
+Important links:
 
-<details>
-<summary>
-More screenshots
-</summary>
+Inspired from :
+* https://stackoverflow.com/a/40950280
+* https://stackoverflow.com/a/59598549
+* https://github.com/kimlimjustin/google-form-clone
 
-![Collect clone demo](https://drive.google.com/uc?export=view&id=1QhPVWHXKApcv5V6FzrHRzut7a5-1Mgp4)
-![Collect clone demo](https://drive.google.com/uc?export=view&id=1Nwz642ORdTCd6KdsaN28Tt142K3wH-pt)
+
+for desktop google sheet sync app.
+* https://learndataanalysis.org/source-code-insert-records-to-from-google-sheets-and-a-database-with-python-and-sheets-api/
+* https://learndataanalysis.org/source-code-insert-records-to-from-google-sheets-and-a-database-with-python-and-sheets-api/
+
+
+google api (python client):
+* https://developers.google.com/docs/api/quickstart/python
+* https://developers.google.com/identity/protocols/oauth2/web-server#python
+* https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values#dimension
+
+scaling rabbitmq and celery: https://vedantsopinions.medium.com/how-we-scaled-celery-for-our-django-app-da2465a3a6be
+
+Python with Django framework and Vanila JS
+
 ##### For the best experience, please use a device with a width of at least 350px
 - Note that this Collect CLONE don't support image uploading due to [Heroku policy](https://help.heroku.com/K1PPS2WM/why-are-my-file-uploads-missing-deleted)
 
@@ -21,8 +34,8 @@ More screenshots
 
 ## Getting started:
 - Clone this repository or fork it
-    - To clone this repository type git clone `https://github.com/kimlimjustin/google-form-clone.git` on your command line
-    - To fork this repository, click fork button of this repository then type git clone `https://github.com/<your username>/google-form-clone.git`
+    - To clone this repository type git clone `https://github.com/Aameer/forms-app.git` on your command line
+    - To fork this repository, click fork button of this repository then type git clone `https://github.com/<your username>/forms-app.git`
 - Install all the dependencies of this project by typing `pip install -r requirements.txt`
 - Migrate the database by typing `python manage.py migrate` on the command line
 - Run the project locally by typing `python manage.py runserver` on the command line
@@ -33,12 +46,7 @@ More screenshots
 For deployment, open `form/settings.py` file and uncomment code from line 131 to 159.
 
 ## License
-Distributed under the [MIT](https://github.com/kimlimjustin/google-form-clone/blob/master/LICENSE) License. See [`LICENSE`](https://github.com/kimlimjustin/google-form-clone/blob/master/LICENSE) for more information.
+Distributed under the [MIT](https://github.com/Aameer/forms-app/blob/master/LICENSE) License. See [`LICENSE`](https://github.com/Aameer/forms-app/blob/master/LICENSE) for more information.
 
 ## Contact
-- Justin Maximillian Kimlim - [kimlimjustin@gmail.com](mailto:kimlimjustin@gmail.com)
-- Project link: https://github.com/kimlimjustin/google-form-clone
-
-## Love my work?
-
-<a href='https://ko-fi.com/kimlimjustin' target='_blank'><img height='35' style='border:0px;height:34px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+- Aameer - [aameer.rafiq@gmail.com](mailto:aameer.rafiq@gmail.com)
