@@ -20,7 +20,7 @@ class Questions(models.Model):
 
 class Answer(models.Model):
     # TODO: Scale here would be highest. Some sharding might be required.
-    answer = models.CharField(max_length=5000)
+    answer = models.CharField(max_length=5000) # Also not supporting Multi Choice in a nice manner
     answer_to = models.ForeignKey(Questions, on_delete = models.CASCADE ,related_name = "answer_to")
 
 class Form(models.Model):

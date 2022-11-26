@@ -6,8 +6,8 @@ from google_auth_oauthlib.flow import Flow, InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 from google.auth.transport.requests import Request
-
-
+#import ipdb
+print("Google APi service")
 def create_service(client_secret_file, api_name, api_version, *scopes, prefix=''):
 	CLIENT_SECRET_FILE = client_secret_file
 	API_SERVICE_NAME = api_name
@@ -26,7 +26,7 @@ def create_service(client_secret_file, api_name, api_version, *scopes, prefix=''
 	if os.path.exists(os.path.join(working_dir, token_dir, pickle_file)):
 		with open(os.path.join(working_dir, token_dir, pickle_file), 'rb') as token:
 			cred = pickle.load(token)
-
+	#ipdb.set_trace();
 	if not cred or not cred.valid:
 		if cred and cred.expired and cred.refresh_token:
 			cred.refresh(Request())

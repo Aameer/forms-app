@@ -41,9 +41,13 @@ Python with Django framework and Vanila JS
 - Run the project locally by typing `python manage.py runserver` on the command line
     - NB: to run it on your local network, type `python manage.py runserver 0.0.0.0:8000`
 - You project will be accessible in your localhost or local network.
+## For pushing forms data to Google sheets
+- Setup Desktop app on Google API
+- update `sheets_sync.py` with credentails file name. By default assumes name as `client-secret-desktop.json`.
+- Don't forget to add sheet ID. (TODO: automatically create on fly and store in DB and retrieve when required)
 
-## Deployment
-For deployment, open `form/settings.py` file and uncomment code from line 131 to 159.
+<!-- ## Deployment
+For deployment, open `form/settings.py` file and uncomment code from line 131 to 159. -->
 
 ## License
 Distributed under the [MIT](https://github.com/Aameer/forms-app/blob/master/LICENSE) License. See [`LICENSE`](https://github.com/Aameer/forms-app/blob/master/LICENSE) for more information.
