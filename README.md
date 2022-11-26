@@ -25,7 +25,7 @@ scaling rabbitmq and celery: https://vedantsopinions.medium.com/how-we-scaled-ce
 Python with Django framework and Vanila JS
 
 ##### For the best experience, please use a device with a width of at least 350px
-- Note that this Collect CLONE don't support image uploading due to [Heroku policy](https://help.heroku.com/K1PPS2WM/why-are-my-file-uploads-missing-deleted)
+<!-- - Note that this Collect CLONE don't support image uploading due to [Heroku policy](https://help.heroku.com/K1PPS2WM/why-are-my-file-uploads-missing-deleted) -->
 
 </details>
 ## Built using:
