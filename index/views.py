@@ -503,6 +503,7 @@ def get_client_ip(request):
     return ip
 
 def submit_form(request, code):
+    # would not scale well. Ideally should be handled asynchronously ( celery + rabbitmq)
     formInfo = Form.objects.filter(code = code)
     #Checking if form exists
     if formInfo.count() == 0:
@@ -546,7 +547,7 @@ def responses(request, code):
     if formInfo.count() == 0:
         return HttpResponseRedirect(reverse('404'))
     else: formInfo = formInfo[0]
-
+    #TODO: would not scale really well. Ideally pagination would be required and pre-processing the summary is needed.
     responsesSummary = []
     choiceAnswered = {}
     filteredResponsesSummary = {}
@@ -558,6 +559,7 @@ def responses(request, code):
                 choice = answer.answer_to.choices.get(id = answer.answer).choice
                 choiceAnswered[question.question][choice] = choiceAnswered.get(question.question, {}).get(choice, 0) + 1
         responsesSummary.append({"question": question, "answers":answers })
+    print(responsesSummary)
     for answr in choiceAnswered:
         filteredResponsesSummary[answr] = {}
         keys = choiceAnswered[answr].values()
@@ -566,6 +568,7 @@ def responses(request, code):
     #Checking if form creator is user
     if formInfo.creator != request.user:
         return HttpResponseRedirect(reverse("403"))
+    print(filteredResponsesSummary)
     return render(request, "index/responses.html", {
         "form": formInfo,
         "responses": Responses.objects.filter(response_to = formInfo),

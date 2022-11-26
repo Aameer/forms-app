@@ -19,6 +19,7 @@ class Questions(models.Model):
     choices = models.ManyToManyField(Choices, related_name = "choices")
 
 class Answer(models.Model):
+    # TODO: Scale here would be highest. Some sharding might be required.
     answer = models.CharField(max_length=5000)
     answer_to = models.ForeignKey(Questions, on_delete = models.CASCADE ,related_name = "answer_to")
 
