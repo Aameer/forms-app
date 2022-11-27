@@ -31,7 +31,9 @@ def pullSampleData(form_code="hODPn5ZPmHJob6Ti6xcTCNQYAVCIHw"): # P0OQ4Y4rrnVRKS
   if rs:
     for r in rs:
       temp={}
+      headlines_temp={}
       for ans in r.response.all():
+        headlines_temp[ans.answer_to_id] = ans.answer_to.question
         #print(ans.id, ans.answer_to_id)
         if ans.answer_to.question_type == "multiple choice" or ans.answer_to.question_type == "checkbox":
           choice = ans.answer_to.choices.get(id = ans.answer).choice
@@ -50,18 +52,19 @@ def pullSampleData(form_code="hODPn5ZPmHJob6Ti6xcTCNQYAVCIHw"): # P0OQ4Y4rrnVRKS
           else:
             temp[ans.answer_to_id]=ans.answer
       #print(list(temp.values()))
+      headlines=list(headlines_temp.values())
       cummulative_resp.append(list(temp.values()))
-    ansFirsts =rs.first().response.all()
+    ansFirsts =rs.first().response.all().order_by('id')
     
-    for ans in ansFirsts:
-      headlines.append(
-        ans.answer_to.question
-      )
+    # for ans in ansFirsts:
+    #   headlines.append(
+    #     ans.answer_to.question
+    #   )
     #pp.pprint(headlines)
     #print(">>>>")
     pp.pprint(cummulative_resp)
     #print("\n")
-  return (list(set(headlines)), cummulative_resp)
+  return (list(dict.fromkeys(headlines)), cummulative_resp)
 
 columns, recordset=pullSampleData()
 # print(type(columns))

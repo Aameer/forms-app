@@ -53,16 +53,15 @@ Python with Django framework and Vanila JS
 <!-- ## Deployment
 For deployment, open `form/settings.py` file and uncomment code from line 131 to 159. -->
 
-# Scale/ Issue and what could be done:
+<!-- # Scale/ Issue and what could be done:
 1. get working app ready ( base version) - 1day ish
 	- gsheet sync ( We are here)
-	<!-- - deployment figured as well and write HLD (based level demo)  -->
-	- formulate questions
+	- write HLD (based level demo) 
 2. created a upto date boiler plate with all fancy things ( maybe not the most upto date) - 1/2 day ish
 3. use own boiler plate to do the above thingy and figure deploymnet (drf, celery, rabbitmq, restframework etc) (kubernetes, github actions, tests, deployment) - 1 day ish
 4. figure out scale base and update HLD - 1 day ish
 5. get it reviewed and then submit - 1 day ish.
-scaling rabbitmq and celery: https://vedantsopinions.medium.com/how-we-scaled-celery-for-our-django-app-da2465a3a6be
+scaling rabbitmq and celery: https://vedantsopinions.medium.com/how-we-scaled-celery-for-our-django-app-da2465a3a6be -->
 
 ## License
 Distributed under the [MIT](https://github.com/Aameer/forms-app/blob/master/LICENSE) License. See [`LICENSE`](https://github.com/Aameer/forms-app/blob/master/LICENSE) for more information.
