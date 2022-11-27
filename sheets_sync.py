@@ -54,8 +54,7 @@ def pullSampleData(form_code="hODPn5ZPmHJob6Ti6xcTCNQYAVCIHw"): # P0OQ4Y4rrnVRKS
       #print(list(temp.values()))
       headlines=list(headlines_temp.values())
       cummulative_resp.append(list(temp.values()))
-    ansFirsts =rs.first().response.all().order_by('id')
-    
+    #ansFirsts =rs.first().response.all().order_by('id')
     # for ans in ansFirsts:
     #   headlines.append(
     #     ans.answer_to.question
